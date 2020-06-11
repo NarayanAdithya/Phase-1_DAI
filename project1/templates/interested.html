@@ -6,13 +6,14 @@
   </head>
   <body>
     {% if inter %}
-    <table>
+    <table border="1" align=center>
       <thead>
         Names
       </thead>
     {% for k in inter %}
     <tr>
       <td>{{k.email}}</td>
+      <td>{{k.name}}</td>
     </tr>
     {% endfor %}
     </table>

@@ -9,11 +9,12 @@ db=SQLAlchemy(app)
 def homepagefn():
         if(request.method=='POST'):
             mailid=request.form.get('emailid')
-            new_task=interested(email=mailid)
+            name=request.form.get('Name')
+            new_task=user(email=mailid,name=name)
             try:
                 db.session.add(new_task)
                 db.session.commit()
-                return redirect('/listofinterested')
+                return redirect('/')
             except:
                 return "There is db issue"
         else:
@@ -22,14 +23,20 @@ def homepagefn():
 
 class interested(db.Model):
     id=db.Column(db.Integer,primary_key=True)
-    email=db.Column(db.String(80),nullable=False)
-
-    def __repr__():
+    email=db.Column(db.String(80),unique=True)
+    name=db.Column(db.String(32),nullable=False)
+    def __repr__(self):
+        return '<User %r>'%self.id
+class user(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    email=db.Column(db.String(80),unique=True)
+    name=db.Column(db.String(32),nullable=False)
+    def __repr__(self):
         return '<User %r>'%self.id
 @app.route('/listofinterested')
 def interestedpeople():
-    inter=interested.query.all()
-    return render_template('interested.html',inter)
+    inter=user.query.all()
+    return render_template('interested.html',inter=inter)
 
 if __name__ == '__main__':
     app.run(debug=True)
