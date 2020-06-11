@@ -33,7 +33,7 @@ class user(db.Model):
     name=db.Column(db.String(32),nullable=False)
     def __repr__(self):
         return '<User %r>'%self.id
-@app.route('/listofinterested')
+@app.route('/listofusers')
 def interestedpeople():
     inter=user.query.all()
     return render_template('interested.html',inter=inter)

@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Interested people</title>
-  </head>
-  <body>
+{% extends 'website.html' %}
+{% block body %}
     {% if inter %}
-    <table border="1" align=center>
-      <thead>
-        Names
-      </thead>
-    {% for k in inter %}
+    <table class="table table-striped table-dark">
+  <thead>
     <tr>
+      <th scope="col">#</th>
+      <th scope="col">EmailId</th>
+      <th scope="col">Name</th>
+      </tr>
+  </thead>
+    <tbody>
+    {% for k in inter %}
+  
+    <tr>
+      <th scope="row">{{k.id}}</th>
       <td>{{k.email}}</td>
       <td>{{k.name}}</td>
+
     </tr>
+
     {% endfor %}
+      </tbody>
     </table>
     {% else %}
     <p>We cant find anything</p>
     {% endif %}
-  </body>
-</html>
+{% endblock %}
