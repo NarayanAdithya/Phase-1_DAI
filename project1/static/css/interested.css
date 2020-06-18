@@ -1,0 +1,47 @@
+
+    h1 {
+        color: green;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    /* Float columns */
+    .column {
+        float: left;
+        width: 33%;
+        padding: 0 5px;
+    }
+
+    .row {
+        margin: 0 -5px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+    }
+
+    /* Style the cards */
+    .card {
+        padding: 10px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        }
+
+    .card:hover {
+        transform: scale(1.1);
+        background-color: black;
+        transition-duration: 2s;
+        color: white;
+    }
+
+    .fa {
+        font-size: 50px;
+    }

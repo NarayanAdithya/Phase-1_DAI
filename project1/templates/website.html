@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<title>project ia</title>
-		<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
 </head>
 <body>
 	<nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
@@ -40,6 +40,7 @@
 	  </div>
 	</nav>
 	{% block body %}
+
 	<div id="rightmatter">
 	The Potential Benifets of the <br> <span style="color: #8e44ad;font-weight: bold;text-transform: uppercase;"> Artificial Intelligence </span> are huge.<br>
 	<h6 style="margin-top: 4%;font-weight: bold;">Coming soon</h6>
@@ -1267,12 +1268,11 @@
   </div>
 	<div class="form-group">
     <label for="exampleInputEmail1">Name</label>
-    <input type="name" name="Name" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">You can leave this field empty if you want to.</small>
-  </div>
+    <input type="name" name="Name" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Enter Name">
+
 
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="compulsorychkbox">
     <label class="form-check-label" for="exampleCheck1">You Agree to our terms and conditions</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -1281,7 +1281,11 @@
 </div>
 
 </div>
+<script type="text/javascript">
+	var x= document.getElementById("compulsorychkbox");
+	x.required=true;
 
+</script>
 
 {% endblock %}
 </body>
