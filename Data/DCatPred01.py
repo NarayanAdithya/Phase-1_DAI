@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import pickle
 
 data=pd.read_excel('DataCategory_pred.xlsx')
 data.drop('Disease Name',axis=1,inplace=True)
@@ -10,7 +11,8 @@ new=pd.get_dummies(data,drop_first=True)
 from sklearn.ensemble import RandomForestClassifier
 rf=RandomForestClassifier()
 rf.fit(new,y)
-
+pickle.dump(rf,open('testcategory.pkl','wb'))
+rf=pickle.load(open('testcategory.pkl','rb'))
 Attributes=list(data.columns)
 Attributes[3]='Scalp Issues'
 result={'OI':'We are still Learning','DVI':'Diarrhoea Viral Infections','RI':'Respiratory Infections','RSI':'Rashes and Skin Infections'}
