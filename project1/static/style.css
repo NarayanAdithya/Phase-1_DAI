@@ -1,0 +1,286 @@
+
+  html{
+
+    display: block;
+    scroll-behavior: smooth;
+
+  }
+
+  #mlhomesvg svg{
+
+    position: relative;
+    height: 30%;
+      width: 30%;
+      right: -38%;
+  margin: 0 auto;
+  margin-top: 50px;
+  }
+  #mlhomecontent{
+
+    position: relative;
+    margin-top: 3%;
+  }
+  #homesvg svg{
+
+    width: 60%;
+    height: 60%;
+    margin-top: 190px;
+    align-self: center;
+    position: absolute;
+    left: 1%;
+  }
+  #aboutsvg{
+
+    position: relative;
+    top: -10%;
+  }
+
+  #contactsvg svg{
+
+  position: relative;
+  height: 50%;
+  width: 50%;
+  right: -20%;
+  margin: 0 auto;
+
+
+  }
+  #aboutsvg svg{
+    position: relative;
+    height: 50%;
+  width: 50%;
+  right: -24%;
+  margin: 0 auto;
+
+  }
+  #Mail{
+
+    margin-bottom: 100px;
+  }
+  #contactsvg{
+
+    margin-top: 1%;
+    margin-bottom: 100px;
+  }
+  #Contact,#About{
+
+    height: 904px;
+
+  }
+  #rightmatter{
+
+    position: absolute;
+    right: 7%;
+          top: 41%;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bolder;
+          font-size: 33px;
+
+    text-align: center;
+
+  }
+  #rightmatter button{
+
+    margin-top: 6%;
+    border-radius: 40px;
+     padding: 11px;
+     color: white;
+     font-weight: bold;
+     background-color: #6C63FF;
+     border: 2px solid #6C63FF;
+     font-size: 18px;
+  }
+  .same{
+
+    padding: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Roboto',sans-serif;
+    color: black;
+  }
+  #check{
+
+    display: none;
+  }
+  #checkbtn{
+
+          font-size: 30px;
+          color: black;
+          float: right;
+          margin-top: 29px;
+          cursor: pointer;
+          margin-right: 40px;
+          line-height: 90px;
+          display: none;
+
+      }
+  #top{
+
+    margin: 0;
+    background-color: #eee;
+    height: 90px;
+    width: 100%;
+    z-index: 9999;
+  }
+  #content{
+
+    padding-top: 900px;
+  }
+  #navs{
+
+    float: right;
+    margin-right: 40px;
+
+
+
+
+  }
+  #navs li {
+
+    display: inline-block;
+    margin-right: 40px;
+    padding: 30px;
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: bold;
+
+  }
+  #navs li a{
+
+    text-decoration: none;
+  }
+  #heart{
+
+    animation: 1s moveup infinite linear;
+    animation-direction: alternate;
+
+  }
+
+  @keyframes moveup{
+
+    0%{
+
+     transform:scale(1);
+
+    }
+    100%{
+      transform:scale(1.09);
+    }
+
+
+  }
+  @media screen and (max-width:680px){
+
+    #homesvg svg{
+
+              position: absolute;
+      left: 22%;
+      top: -20%;
+
+    }
+    #About{
+
+      height: 100%;
+
+    }
+
+    #navs li{
+
+      display: block;
+      margin-top: 20px;
+      font-size: 24px;
+      color: white;
+
+
+    }
+    #navs li a{
+      color: white;
+    }
+    #navs li a:hover{
+
+      color: black;
+      transition: 0.6s;
+    }
+    .fa-bars{
+
+              float: right;
+
+    }
+    #top,img{
+
+      position: fixed;
+
+    }
+    #checkbtn{
+
+      display: block;
+    }
+    #navs{
+
+              position: fixed;
+              background-color: #487eb0;
+              padding-top: 100px;
+              height: 100%;
+              top: 90px;
+              width: 100%;
+              text-align: center;
+              left: -100%;
+              transition: 0.5s ease;
+
+
+
+          }
+          #Home{
+
+            height: 100%;
+          }
+          #mlhomesvg svg{
+
+    transform: scale(1.8);
+
+    position: relative;
+    margin-top: 20%;
+    margin-bottom: 20%;
+
+  }
+  #mlhomecontent{
+
+    position: relative;
+    margin-top: 3%;
+  }
+
+          #check:checked~#navs{
+
+            left: 0;
+          }
+          #rightmatter{
+
+
+            position: absolute;
+            top: 60%;
+            font-size: 22px;
+            padding: 14px;
+            text-align: center;
+            left: 10%;
+          }
+          #contactsvg svg{
+
+
+    position: relative;
+    margin-top: 15%;
+    left: 25%;
+    transform: scale(1.4);
+  }
+  #aboutsvg svg{
+
+    transform: scale(1.8);
+
+
+  }
+  #aboutcontent{
+
+    position: relative;
+    margin-top: 15%;
+  }
+  
